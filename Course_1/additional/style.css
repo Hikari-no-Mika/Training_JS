@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+table,
+td {
+  border: 1px solid #000;
+}
+table {
+  border-collapse: collapse;
+}
+.light {
+  background: rgb(249, 251, 229);
+  color: rgb(63, 63, 63);
+}
+.dark {
+  background: rgb(63, 63, 63);
+  color: rgb(249, 251, 229);
+}
+td {
+  width: 20px;
+  height: 20px;
+}
+div {
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
