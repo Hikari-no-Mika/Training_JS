@@ -84,8 +84,13 @@ console.clear()
 
 {
    let array = ['w', 'a', 's', 'd'];
-   let direction = array[(Math.random() * array) | 0] //выборка случайного числа из массива, а "| 0" сам по себе является побитовой операцией, которая ничего не делает, но в js значения с плавающей точкой преобразуются в целые числа перед любой побитовой операцией-крч чтоб не было NaN/undefined
-   //НО "| 0" просто выбирает 1е в массиве (можно выбрать другое)-а без этого не работает совсем(((
+   function randomX() {
+      const min = Math.ceil(0);
+      const max = Math.floor(3);
+      return Math.floor(Math.random() * (max - min)) + min;
+   } //ф-ция для рандома по кол-ву ячеек массива
+   let direction = array[randomX()]; //реализация выбора рандомной ячейки массива
+      
    if (direction === 'w'){
       direction = 119, console.log("Вверх");
    }
