@@ -58,8 +58,8 @@ console.clear();
   let i = 1;
   let n = "-image.png";
   function normalizeValue(value) {
-    return value.toString().length > 1 ? value : `0${value}`; // функция дописывает ноль если длина строки 1 
-}
+    return value.toString().length > 1 ? value : `0${value}`; // функция дописывает ноль если длина строки 1
+  }
   while (i <= 10) {
     numb = normalizeValue(i) + n; // применяем функцию к i и суммируем
     console.log("Зад_3", numb);
@@ -80,7 +80,16 @@ console.clear();
 // "5 * 8 = 40"
 // "5 * 9 = 45"
 // "5 * 10 = 50"
-
+{
+  const x = 5;
+  let i = 0;
+  let y;
+  while (i <= 10) {
+    y = x * i;
+    console.log("Зад_4", x, "*", i, "=", y);
+    i++;
+  }
+}
 // Дана константа STR='Глокая куздра'. Посмотреть количество символов в строке
 // можно через обращение к STR.length, а обратиться к первому символу через STR[0]
 // Напишите цикл while, который будет выводить по одной букве строки
@@ -98,6 +107,14 @@ console.clear();
 // д
 // р
 // а
+{
+   const STR = "Глокая куздра";
+   let i = 0;
+   while (i < STR.length) {
+      console.log("Зад_5", STR[i]);
+      i++;      
+   }
+}
 
 // Дана переменная data=[234,567,123,819]. Узнать сколько элементов в массива можно
 // через обращение data.length, а обратиться к начальному элементу через data[0]
@@ -107,3 +124,12 @@ console.clear();
 // 567
 // 123
 // 819
+
+   {
+      const data = [234,567,123,819];
+      let i = 0;
+      while (i < data.length) {
+         console.log("Зад_6", data[i]);
+         i++;      
+      }
+   }
