@@ -8,8 +8,8 @@ cycle - цикл
 let i = 0;
 
 while (i < 10) {
-  console.log(i);
-  i++;
+    console.log(i);
+    i++;
 }
 
 console.log("После всего", i);
@@ -17,11 +17,11 @@ console.log("После всего", i);
 console.clear();
 // Напишите цикл, который выводит числа от 10 до 1
 {
-  let i = 10;
-  while (i > 0) {
-    console.log("Зад_1", i);
-    i = i - 1;
-  }
+    let i = 10;
+    while (i > 0) {
+        console.log("Зад_1", i);
+        i = i - 1;
+    }
 }
 
 // Дана константа STEPS равная 10. Напишите скрипт,
@@ -38,12 +38,12 @@ console.clear();
 // шаг №10
 
 {
-  const steps = 10;
-  let i = 1;
-  while (i <= steps) {
-    console.log("Зад_2", "шаг №", i);
-    i++;
-  }
+    const steps = 10;
+    let i = 1;
+    while (i <= steps) {
+        console.log("Зад_2", `шаг №${i}`);
+        i++;
+    }
 }
 
 // Сгенерируйте названия файлов по образцу при помощи цикла while.
@@ -55,16 +55,18 @@ console.clear();
 // "10-image.png"
 // Выведите результат [в консоль].
 {
-  let i = 1;
-  let n = "-image.png";
-  function normalizeValue(value) {
-    return value.toString().length > 1 ? value : `0${value}`; // функция дописывает ноль если длина строки 1
-  }
-  while (i <= 10) {
-    numb = normalizeValue(i) + n; // применяем функцию к i и суммируем
-    console.log("Зад_3", numb);
-    i++;
-  }
+    let i = 1;
+    let n = "-image.png";
+
+    function normalizeValue(value) {
+        return value.toString().length > 1 ? value : `0${value}`; // функция дописывает ноль если длина строки 1
+    }
+
+    while (i <= 10) {
+        numb = normalizeValue(i) + n; // применяем функцию к i и суммируем
+        console.log("Зад_3", numb);
+        i++;
+    }
 }
 
 // Выведите таблицу умножения числа 5 на другие числа.
@@ -81,14 +83,14 @@ console.clear();
 // "5 * 9 = 45"
 // "5 * 10 = 50"
 {
-  const x = 5;
-  let i = 0;
-  let y;
-  while (i <= 10) {
-    y = x * i;
-    console.log("Зад_4", x, "*", i, "=", y);
-    i++;
-  }
+    const x = 5;
+    let i = 0;
+    let y;
+    while (i <= 10) {
+        y = x * i;
+        console.log("Зад_4", x, "*", i, "=", y);
+        i++;
+    }
 }
 // Дана константа STR='Глокая куздра'. Посмотреть количество символов в строке
 // можно через обращение к STR.length, а обратиться к первому символу через STR[0]
@@ -108,12 +110,12 @@ console.clear();
 // р
 // а
 {
-   const STR = "Глокая куздра";
-   let i = 0;
-   while (i < STR.length) {
-      console.log("Зад_5", STR[i]);
-      i++;      
-   }
+    const STR = "Глокая куздра";
+    let i = 0;
+    while (i < STR.length) {
+        console.log("Зад_5", STR[i]);
+        i++;
+    }
 }
 
 // Дана переменная data=[234,567,123,819]. Узнать сколько элементов в массива можно
@@ -125,11 +127,11 @@ console.clear();
 // 123
 // 819
 
-   {
-      const data = [234,567,123,819];
-      let i = 0;
-      while (i < data.length) {
-         console.log("Зад_6", data[i]);
-         i++;      
-      }
-   }
+{
+    const data = [234, 567, 123, 819];
+    let i = 0;
+    while (i < data.length) {
+        console.log("Зад_6", data[i]);
+        i++;
+    }
+}
