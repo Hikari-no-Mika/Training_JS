@@ -7,25 +7,25 @@ for - для
 break - разрыв
 continue - продолжать
 */
-
-for (let i = 0; i < 5; i++) {
-    console.log("Зад_1", i);
-}
-let i = 100500;
-console.log("Зад_1", i);
-
-for (let i = 0; i < 5; i++) {
-
-    if (i == 3) {
-        break;
+{
+    for (let i = 0; i < 5; i++) {
+        console.log("Зад_1", i);
     }
-
-    if (i == 1) {
-        continue;
-    }
+    let i = 100500;
     console.log("Зад_1", i);
-}
 
+    for (let i = 0; i < 5; i++) {
+
+        if (i == 3) {
+            break;
+        }
+
+        if (i == 1) {
+            continue;
+        }
+        console.log("Зад_1", i);
+    }
+}
 //Создайте строку из HTML-тегов <select> и <option> так, чтобы было 10 опций
 {
     let select = '<select name="param">\n';
@@ -42,14 +42,12 @@ for (let i = 0; i < 5; i++) {
     const LEVEL = 5;
     let tree = '';
     let chars = '**';
-    for (let i = 0; i < LEVEL; i++) {
-        tree += '*';
+    for (let i = 0; i < LEVEL; i++) {tree += '*';
         for (let j = 0; j < i; j++) {
-            tree += chars;
-        }
+            tree += chars;}
         tree += '\n';
     }
-    console.log("Зад_3", tree)
+    console.log("Зад_3\n",tree)
 }
 
 // Используя for выведите все числа от 1 до 20
@@ -137,10 +135,10 @@ for (let i = 0; i < 5; i++) {
 {
     const arr = ["камень", "ножницы", "бумага"];
     let pick = '';
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 0; i < 10; i++) {
         pick = Math.floor(Math.random() * arr.length);
         console.log("Зад_9", arr[pick]);
-    }//почему-то выводит не 10 строк, а между 6 и 8
+    }
 }
 
 // Посчитайте количество звёздочек (символов '*') в строковой 
