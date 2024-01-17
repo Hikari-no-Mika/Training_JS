@@ -42,12 +42,14 @@ continue - продолжать
     const LEVEL = 5;
     let tree = '';
     let chars = '**';
-    for (let i = 0; i < LEVEL; i++) {tree += '*';
+    for (let i = 0; i < LEVEL; i++) {
+        tree += '*';
         for (let j = 0; j < i; j++) {
-            tree += chars;}
+            tree += chars;
+        }
         tree += '\n';
     }
-    console.log("Зад_3\n",tree)
+    console.log("Зад_3\n", tree)
 }
 
 // Используя for выведите все числа от 1 до 20
@@ -144,4 +146,21 @@ continue - продолжать
 // Посчитайте количество звёздочек (символов '*') в строковой 
 // переменной str='%:;%:?"*?*№?;:"РПВА'. 
 // Убедитесь, что в данной строке две звёздочки
-
+{
+    const str = '%:;%:?"*?*№?;:"РПВА';
+    let x = 0;
+    let proverka = false;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == `*`) {
+            x += 1;
+        } else {
+            x += 0;
+        }
+    }
+    if (x > 0) {
+        proverka = true;
+    } else {
+        proverka = false;
+    }
+    console.log("Зад_10", proverka, `*=${x}`);
+}
