@@ -91,6 +91,27 @@ console.log("------Пример------");
 // console.log( getNumberOfCoins(23) );  //'10,10,2,1'
 
 
+{
+
+    let m = [10, 5, 2, 1];
+    let res = [];
+
+    function getNumberOfCoins(sum) {
+        for (let i = 0; i <= m.length; i++) {
+
+            while (sum - m[i] >= 0) {
+                sum = sum - m[i];
+                res.push(m[i]); //запись ячейки m[i] в конец массива res
+            }
+
+        }
+        return res;
+    }
+
+
+    console.log('#_5', getNumberOfCoins(23));  //'10,10,2,1'
+}
+
 // Напишите функцию fizzbuzz(n), она принимает положительное целое число.
 // Функция должна вывести числа от 0 до n, но
 // - если число кратно 3, то выводить 'fizz'
