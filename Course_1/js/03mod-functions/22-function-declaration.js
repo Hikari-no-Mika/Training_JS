@@ -54,12 +54,12 @@ console.log("------Пример------");
 
 {
     function getRPC() {
-        let x = Math.floor(Math.random() * getRPC.length);
-        if (x == 0) {
+        let x = Math.floor(Math.random() * 2);
+        if (x === 0) {
             return '👊';
-        } else if (x == 1) {
+        } else if (x === 1) {
             return '✌';
-        } else if (x == 2) {
+        } else if (x === 2) {
             return '✋';
         }
     }
@@ -118,7 +118,7 @@ console.log("------Пример------");
 // - если число кратно 5, то выводить 'buzz'
 // - если одновременно кратно 3 и 5, то 'fizzbuzz'
 
-{
+{ //переделать - эту рабочую функцию засунуть в цикл от 0 до n
     function fizzbuzz(n) {
         if (n % 3 === 0 && n % 5 !== 0) {
             return `#_6 ${n} fizz`;
@@ -169,7 +169,7 @@ console.log("------Пример------");
         return true;
     }
 
-    console.log(isPrimeNumber(11));
+    console.log('#_8', isPrimeNumber(11));
 }
 
 // Напишите функцию getPassword(n), которая генерирует пароль.
@@ -181,26 +181,26 @@ console.log("------Пример------");
 
     function getPassword(n) {
         for (let i = 0; i < n; i++) {
-            var randomIndex = Math.floor(Math.random() * allowedChars.length);
+            let randomIndex = Math.floor(Math.random() * allowedChars.length);
             pass += allowedChars[randomIndex]
         }
         return pass;
     }
 
     function getAllowedCharsArr() { //ASCII-массив (стандартный) с заданным периодом кодов от до
-        var FIRST_ALLOWED_ASCII_CHAR_INDEX = 36;
-        var ALLOWED_CHARS_COUNT = 126;
+        let FIRST_ALLOWED_ASCII_CHAR_INDEX = 36;
+        let ALLOWED_CHARS_COUNT = 126;
 
         for (var allowedChars = [], i = 0; i < ALLOWED_CHARS_COUNT; i++) {
-            var asciiCode = FIRST_ALLOWED_ASCII_CHAR_INDEX + i;
-            var char = String.fromCharCode(asciiCode);
+            let asciiCode = FIRST_ALLOWED_ASCII_CHAR_INDEX + i;
+            let char = String.fromCharCode(asciiCode);
             allowedChars.push(char)
         }
 
         return allowedChars;
     }
 
-    console.log(getPassword(8));
+    console.log('#_9', getPassword(8));
 }
 
 // Напишите функцию iterator(fn, n = 1), которая принимает другую
@@ -214,6 +214,19 @@ console.log("------Пример------");
 // 'Ура'
 // 'Ура'
 
+{
+    function myfunction() {
+        console.log('Ура');
+    }
+
+    function iterator(fn, n) {
+        for (let i = 0; i < n; i++) {
+            fn();
+        }
+    }
+
+    console.log('#_10', iterator(myfunction, 5));
+}
 
 // Дана строка, состоящая из букв A-Z:
 // "AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB"
@@ -222,3 +235,26 @@ console.log("------Пример------");
 // Пояснение:
 // 1. если символ встречается 1 раз, он остается без изменений
 // 2. если символ повторяется более 1 раза, к нему добавляется количество повторений
+{
+    const str = 'AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB';
+    let x = 1;
+    let arr = [];
+
+    function RLE() {
+        let char = str[0];
+        for (let i = 1; i <= str.length; i++) {
+            if (char === str[i]) {
+                x += 1;
+            } else {
+                arr.push(char + (x > 1 ? x : ''));
+                char = str[i];
+                x = 1;
+            }
+        }
+        // arr.push(str[i]);
+
+        return arr;
+    }
+
+    console.log('#_11', RLE());
+}
