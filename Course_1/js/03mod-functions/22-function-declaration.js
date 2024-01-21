@@ -53,7 +53,7 @@ console.log("------Пример------");
 // console.log( getRPC() ); //✋
 
 {
-    function getRPC(a, b, c) {
+    function getRPC() {
         let x = Math.floor(Math.random() * getRPC.length);
         if (x == 0) {
             return '👊';
@@ -118,15 +118,90 @@ console.log("------Пример------");
 // - если число кратно 5, то выводить 'buzz'
 // - если одновременно кратно 3 и 5, то 'fizzbuzz'
 
+{
+    function fizzbuzz(n) {
+        if (n % 3 === 0 && n % 5 !== 0) {
+            return `#_6 ${n} fizz`;
+        } else if (n % 3 !== 0 && n % 5 === 0) {
+            return `#_6 ${n} buzz`;
+        } else if (n % 3 === 0 && n % 5 === 0) {
+            return `#_6 ${n} fizzbuzz`;
+        } else if (n % 3 !== 0 && n % 5 !== 0) {
+            return `#_6 ${n} Не кратно 3 и/или 5`;
+        }
+    }
+
+    console.log(fizzbuzz(15));//fizzbuzz
+}
+
 // Напишите функцию getNumberOfVowels(str) - она должна возвращать количество
 // гласных находящихся в строке str (договоримся считать русские гласные)
 
+{
+    let n = 0;
+
+    function getNumberOfVowels(str) {
+        for (let i = 0; i <= str.length; i++) {
+            if ((str[i] === 'а') || (str[i] === 'я') || (str[i] === 'у') || (str[i] === 'ю') || (str[i] === 'о') || (str[i] === 'е') || (str[i] === 'ё') || (str[i] === 'э') || (str[i] === 'и') || (str[i] === 'ы')) {
+                n += 1;
+                console.log('#_7', str[i]);
+            }
+        }
+        return `#_7 ${n} гласных`;
+    }
+
+    console.log(getNumberOfVowels("кошка"));
+}
+
 // Напишите функцию isPrimeNumber(n) - она принимает положительно целое, и
 // возвращает true, если число является простым. Иначе функция возвращает false
+//Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1
+{
+    function isPrimeNumber(n) {
+        if (n < 2) {
+            return false;
+        }
+        for (let i = 2; i <= n / 2; i += 1) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    console.log(isPrimeNumber(11));
+}
 
 // Напишите функцию getPassword(n), которая генерирует пароль.
 // Длина пароля должны быть n - символов. Нужно использовать
 // коды символов от 36 до 126
+{
+    let pass = [];
+    let allowedChars = getAllowedCharsArr();
+
+    function getPassword(n) {
+        for (let i = 0; i < n; i++) {
+            var randomIndex = Math.floor(Math.random() * allowedChars.length);
+            pass += allowedChars[randomIndex]
+        }
+        return pass;
+    }
+
+    function getAllowedCharsArr() { //ASCII-массив (стандартный) с заданным периодом кодов от до
+        var FIRST_ALLOWED_ASCII_CHAR_INDEX = 36;
+        var ALLOWED_CHARS_COUNT = 126;
+
+        for (var allowedChars = [], i = 0; i < ALLOWED_CHARS_COUNT; i++) {
+            var asciiCode = FIRST_ALLOWED_ASCII_CHAR_INDEX + i;
+            var char = String.fromCharCode(asciiCode);
+            allowedChars.push(char)
+        }
+
+        return allowedChars;
+    }
+
+    console.log(getPassword(8));
+}
 
 // Напишите функцию iterator(fn, n = 1), которая принимает другую
 // функцию и количество повторений n, а затем вызывает fn - n раз
@@ -138,6 +213,7 @@ console.log("------Пример------");
 // 'Ура'
 // 'Ура'
 // 'Ура'
+
 
 // Дана строка, состоящая из букв A-Z:
 // "AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB"
