@@ -9,15 +9,14 @@ typeof - тип
 */
 
 let cat1 = {
-  name: "Барсик",
-  color: "red",
-  age: 9,
-  txt: "мяу",
-  meow() {
-    return this.txt;
-  },
+    name: "Барсик",
+    color: "red",
+    age: 9,
+    txt: "мяу",
+    meow() {
+        return this.txt;
+    },
 };
-
 
 
 // Измените метод sound в объектах так, чтобы показывалось имя каждой собаки
@@ -27,7 +26,26 @@ let cat1 = {
 // console.log(dog1.sound()); //Шарик
 // console.log(dog2.sound()); //Гром
 // console.log(dog3.sound()); //Чиби
-
+{
+    let dog1 = {
+        name: 'Шарик', sound() {
+            return `${this.name}: гав`
+        }
+    }
+    let dog2 = {
+        name: 'Гром', sound() {
+            return `${this.name}: гав`
+        }
+    }
+    let dog3 = {
+        name: 'Чиби', sound() {
+            return `${this.name}: гав`
+        }
+    }
+    console.log(dog1.sound()); //Шарик
+    console.log(dog2.sound()); //Гром
+    console.log(dog3.sound()); //Чиби
+}
 
 
 // Создайте объект input, у которого есть свойства:
@@ -38,8 +56,7 @@ let cat1 = {
 // строку следующего вида: '<input type="text" name="param" disabled >'
 
 
-
-// Есть переменная gameUnit в виде объекта описывающего 
+// Есть переменная gameUnit в виде объекта описывающего
 // игровую единицу. У объекта есть строковое свойство history, в которое
 // будет дописываться каждое движение объекта. Напишите методы
 // moveForward - должен добавлять в history слово 'вперёд'
@@ -54,8 +71,7 @@ let cat1 = {
 // console.log(gameUnit.history); //'вперёд,вправо,вправо,вперёд,'
 
 
-
-// Создайте объект todosApp, который будет хранить 
+// Создайте объект todosApp, который будет хранить
 // объектное свойство todos и методы принимающие строковую переменную
 // add( todo ) - добавляет задачу для выполнения (и помечает её как невыполненную)
 // delete( todo ) - удаляет задачу по названию

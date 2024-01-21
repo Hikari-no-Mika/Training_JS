@@ -10,59 +10,76 @@ array - массив
 length - длина
 */
 
-
+{
 //индексы     0    1    2    3
-let arr1 = [123, 345, 789, 765];
+    let arr1 = [123, 345, 789, 765];
 
-console.log( arr1.length ); //4
-console.log( arr1[0] ); //123
-console.log( arr1[1] ); //345
-console.log( arr1[2] ); //789
-console.log( arr1[3] ); //765
-console.log( arr1[4] ); //undefined
+    console.log(arr1.length); //длина массива - кол-во элементов 4
+    console.log(arr1[0]); //123
+    console.log(arr1[1]); //345
+    console.log(arr1[2]); //789
+    console.log(arr1[3]); //765
+    console.log(arr1[4]); //undefined
 
 
+    let arr2 = [
+        9,
+        "q",
+        true,
+        {name: "john"},
+        [45, 56],
+        function () {
+            return 2;
+        },
+    ];
 
-let arr2 = [
-  9,
-  "q",
-  true,
-  { name: "john" },
-  [45, 56],
-  function () {
-    return 2;
-  },
-];
+    console.log(arr2 + "");
+    console.log(arr2.length);
 
-console.log(arr2 + "");
-console.log(arr2.length);
-
-console.log(arr2[0]); //9
-console.log(arr2[3].name); //john
-console.log(arr2[3]["name"]); //john
-console.log(arr2[4][1]); //56
-console.log(arr2[5]()); //2
-
+    console.log(arr2[0]); //9
+    console.log(arr2[3].name); //john
+    console.log(arr2[3]["name"]); //john
+    console.log(arr2[4][1]); //56
+    console.log(arr2[5]()); //2
+}
 // Создайте числовой массив из чисел 1, 2, 3, 4 и 5
 // Выведите массив [в консоль]
-
-
-
+{
+    let arr1 = [];
+    arr1[0] = 1;
+    arr1[1] = 2;
+    arr1[2] = 3;
+    arr1[3] = 4;
+    arr1[4] = 5;
+    console.log(arr1);
+}
 // Создайте массив строк "Ехал", "Грека", "через", "реку"
 // Выведите массив [в консоль]
 
-
-
+let arr2 = ["Ехал", "Грека", "через", "реку"];
+console.log(arr2);
 // Создайте числовой массив из чисел от 0 до 99
 // Выведите массив [в консоль]
+let arr3 = [];
+for (let i = 0; i < 100; i++) {
+    arr3[i] = i;
+}
+console.log(arr3);
 
-
-
+//Цикл FOR(in)
+{
+    let obj = {name: 'Имя', color: 'красный'}
+    for (let prop in obj) { //Проходится по свойствам объекта в цикле, в переменную prop будут попадать строковые свойства
+        console.log(prop, obj[prop]);
+    }
+    for (let prop in arr2) { //Проходится по свойствам объекта в цикле, в переменную prop будут попадать строковые свойства
+        console.log(prop, arr2[prop]);
+    }
+}
 // Создайте массив с названиями месяцев на русском
 //[ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
 // "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ]
 // Выведите массив [в консоль]
-
 
 
 // Создайте массив с названиями дней недели на русском
@@ -70,11 +87,9 @@ console.log(arr2[5]()); //2
 // Выведите элементы массива [в консоль]
 
 
-
 // Есть числовой массив num=[ 34,67,12,34,1,100,56,87 ]
 // Найдите минимальное и максимальное значение массива
 // Выведите результат [в консоль]
-
 
 
 // Есть массив функций functions, выполните их все
@@ -87,7 +102,6 @@ console.log(arr2[5]()); //2
 //   () => console.log('сидит'),
 //   () => console.log('фазан'),
 // ];
-
 
 
 // Есть массив объектов users, выведите имена отдельных пользователей
