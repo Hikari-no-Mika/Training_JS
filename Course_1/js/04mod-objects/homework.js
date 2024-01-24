@@ -6,7 +6,7 @@
  */
 
 // Задание 2
-/* Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.*/ 
+/* Создайте объект city2 через нотацию {name: "ГородM", population: 1e6}.*/
 
 
 // Задание 3
@@ -32,6 +32,21 @@ city2 метод getCity, который ссылается на getObj.
 Проверьте работу метода. Примечание: к объекту вызова
 можно обратиться через this.
  */
+{
+    let city1 = {name: 'qwerty', population: 1_000_000};
+    let city2 = {name: 'йцукен', population: 2_000_000};
+
+    function getObj() { //ф-ция - метод для объектов
+        return this //кто вызовет getObj-this на того и укажет
+    }
+
+    city1.getCity = getObj;
+    city2.getCity = getObj;
+
+    const city = city1.getCity(); //для удобства вывода вводим переменную
+    console.log('#5', city.name + ' ' + city.population);
+
+}
 
 // Задание 6 (*)
 /* 
@@ -40,7 +55,22 @@ city2 метод getCity, который ссылается на getObj.
 строка «метод3». Сделайте так, чтобы было возможно 
 выполнение кода obj.method1().method2().method3().
  */
-
+{
+    let obj = {
+        method1: function () {
+            console.log('#6,method1'); //строку можно не писать-она вызовется, но не покажется
+            return this;
+        },
+        method2: function () {
+            console.log('#6,method2');//строку можно не писать-она вызовется, но не покажется
+            return this;
+        },
+        method3: function () {
+            return "#6,method3";
+        },
+    }
+    console.log(obj.method1().method2().method3());
+}
 
 // Задание 7 
 /* 
@@ -80,3 +110,15 @@ city2 метод getCity, который ссылается на getObj.
 Примечание: при создании двумерного массива используйте циклы.
 Во внешнем цикле должна появиться конструкция d5[i] = [];
 */
+{
+    let d5 = [];
+    let n = 3;
+    let m = 4;
+    for (let i = 0; i <= n; i++) {
+        d5[i] = [];
+        for (let j = 0; j <= m; j++) {
+            d5[i][j] = [5];
+        }
+    }
+    console.table(d5); //выводит в табличке данные
+}
