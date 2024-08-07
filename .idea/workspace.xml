@@ -19,12 +19,12 @@
     &quot;assignee&quot;: &quot;Hikari-no-Mika&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Hikari-no-Mika/Training_JS.git&quot;,
-    &quot;accountId&quot;: &quot;17081290-2da3-4741-bdd6-4e67bc88dee2&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Hikari-no-Mika/Training_JS.git",
+    "accountId": "a3acbf8c-da53-4519-8f30-b2f06c456964"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -47,7 +47,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -91,6 +91,7 @@
       <workItem from="1722688519405" duration="347000" />
       <workItem from="1722688903254" duration="2611000" />
       <workItem from="1722692188626" duration="1881000" />
+      <workItem from="1722993605750" duration="87000" />
     </task>
     <servers />
   </component>
