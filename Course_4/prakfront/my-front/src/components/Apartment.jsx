@@ -17,7 +17,7 @@ export const Apartment = (props) => {
 
     return (
         <>
-            <Card style={{width: '18rem'}}>
+            <Card style={{width: '15.5rem'}}>
                 <Card.Img variant="top" src={image}/>
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>

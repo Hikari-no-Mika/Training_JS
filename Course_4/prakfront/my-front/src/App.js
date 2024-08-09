@@ -16,7 +16,7 @@ function App() {
                     <Nav className="me-auto">
                         <Link to="/" className="nav-link">Главная</Link>
                         <Link to="/profile" className="nav-link">Профиль</Link>
-                        <Link to="/apartment/1" className="nav-link">Квартира 1</Link>
+                        {/*<Link to="/apartment/" className="nav-link">Квартира</Link>*/}
                     </Nav>
                     <Nav className="justify-content-end">
                         <Link to="/registration" className="nav-link">Регистрация</Link>
