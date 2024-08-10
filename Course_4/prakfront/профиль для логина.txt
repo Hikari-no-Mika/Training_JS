@@ -1,0 +1,6 @@
+db.users.updateOne({_id: ObjectId("66b725a9f64cf34df462ddbe")},{'$set':{'verified':true}})
+ name: 'qqq1',
+ email: 'qqq1@qqq.qqq',
+ password: 12345
+ 
+ залогиниться через него 
