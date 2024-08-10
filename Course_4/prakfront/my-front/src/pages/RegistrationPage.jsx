@@ -74,7 +74,7 @@ export const RegistrationPage = () => {
                         .then(response => response.text())
                         .then(result => {
                             console.log(result);
-                            navigate('/')
+                            navigate(`/`)
                         })
 
                         .catch(error => console.log('error', error));
@@ -91,7 +91,7 @@ export const RegistrationPage = () => {
             <h1>Регистрация </h1>
 
             <Form>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Имя арендатора</Form.Label>
                     <Form.Control type="text"
                                   name="name"

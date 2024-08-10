@@ -5,7 +5,7 @@ export const ApartmentPage = () => {
     let params = useParams();
 
     let apartment = defaultApartments.filter(
-        item => item.id == params.apartmentId
+        item => item.id === params.apartmentId
     )[0];
 
     let {title, price, address} = apartment;

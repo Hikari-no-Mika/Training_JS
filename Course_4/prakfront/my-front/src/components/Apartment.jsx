@@ -23,7 +23,7 @@ export const Apartment = (props) => {
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         {description}
-                        <hr/>
+
                         {address}
                     </Card.Text>
                     <Link to={`/apartment/${id}`} className="btn btn-primary">
